@@ -1,38 +1,170 @@
-.App {
+@font-face {
+  font-family: 'MyFont'; /* Choose a font name for your custom font */
+  src: url('../public/fonts/fira-code/FiraCode-VF.woff') format('woff');
+  /* Use the correct file format and path to your font file */
+  /* The leading '/' in the 'url' value indicates that it's relative to the public folder */
+}
+body {
+  font-family: 'MyFont', sans-serif;
+  background-color: hsl(218 12% 18%);
+
+}
+
+nav{
+  background-color: hsl(218 12% 18%);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+}
+.logoText{
+  color: #fff;
+  font-weight: 800;
+  
+}
+
+.hero{
+  height: 100vh !important;
+
+}
+.Image-Outline{
+  z-index: 1;
+}
+.right{
+  position: relative;
+  top: 50px;
+}
+
+.right img{
+  position: absolute;
+}
+.right  .Image-Outline{
+  rotate: 180deg;
+  position: absolute;
+  z-index: 1;
+  width: 50% !important;
+  right: 40px;
+  bottom: 370px;
+}
+.right .HeroImg{
+  position: absolute;
+  top: 70px;
+  z-index: 5;
+  width: 80% !important;
+  border-bottom: 1px solid hsl(287 60% 65%);
+}
+.right .dots{
+  position: absolute;
+  z-index: 3;
+  width: 70% ;
+  bottom: 350px;
+  right: 95px; 
+}
+.right .heroStats{
+  padding:10px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: absolute;
+  color: #fff;
+  z-index: 4;
+  bottom: 270px;
+  right: 60px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid grey;
+}
+.right .heroStats p{
+  display: inline-block;
+}
+.right .heroStats::before{
+  content: "";
+  display: inline-block;
+  aspect-ratio: 1 / 1;
+  width: 16px;
+  background-color: hsl(287 60% 65%/0.1);
+  border: 1px solid hsl(287 60% 65%);
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.hash{
+  color: hsl(287 60% 65%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.SectionHeadName{
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  
   }
-  to {
-    transform: rotate(360deg);
+  .SectionHeadName::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10vw;
+    height: 2px;
+    background-color: hsl(287 60% 65%);
+    margin-top: 3px;
+    right: -13rem;
+  
   }
+.SectionHeadName span{
+  color: hsl(287 60% 65%);
+}
+.viewall{
+  color: hsl(287 60% 65%);
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.CardContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.line{
+  width: 100%;
+  height: 10px;
+  background-color: hsl(287 60% 65%);
+  margin-bottom: 20px;
+}
+
+.aboutimage{
+  max-width: 340px;
+  flex: 1 1 0px;
+  border-bottom: 1px solid hsl(287 60% 65%);
+}
+
+.icontext{
+  color: hsl(219 14% 71%);
+  margin-left: 0.5rem;
+}
+.ProjectCard{
+  width: 100%;
+  height: 100%;
+}
+.cardImage{
+  height: 180px;
+  
+  object-fit: cover;
+}
+.text{
+  color: hsl(219 14% 71%);
+  
+}
+.icons{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+    
 }
