@@ -26,7 +26,7 @@ function Skills() {
     
   
     const Box = styled.div`
-        background-color: hsl(218 12% 18%);
+        background-color: #191825;
         color: #fff;
         margin-right: 1rem;
         margin-bottom: 1rem;

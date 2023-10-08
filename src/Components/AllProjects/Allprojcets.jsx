@@ -20,9 +20,11 @@ function Allprojects() {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: hsl(218 12% 18%);
+    background-color: #191825;
     color: #fff;
     border: 1px solid hsl(219 14% 71%);
+    min-height: 400px;
+    max-height: 400px;
 `
 
 
@@ -30,6 +32,7 @@ function Allprojects() {
     width: 100%;
     padding: 0.5rem 1rem;
     display: flex;
+    
     justify-content: flex-start;
     color:hsl(219 14% 71%);
     border-top: 1px solid hsl(219 14% 71%);

@@ -18,8 +18,10 @@ function Projects() {
     width: 32%;
     display: flex;
     flex-direction: column;
+    min-height: 400px;
+    max-height: 400px;
     align-items: center;
-    background-color: hsl(218 12% 18%);
+    background-color: #191825;
     color: #fff;
     border: 1px solid hsl(219 14% 71%);
 `

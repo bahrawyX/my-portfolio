@@ -4,14 +4,42 @@
   /* Use the correct file format and path to your font file */
   /* The leading '/' in the 'url' value indicates that it's relative to the public folder */
 }
+
+html, body{
+  scroll-behavior: smooth;
+}
+/* Add this CSS to your App.css or a separate CSS file */
+
+/* Style the container for the particles */
+#particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -9; /* Place it behind other content */
+}
+
+/* Style the content of your app */
+.App {
+  background-color: #191825; /* Set your desired background color */
+  color: #fff; /* Set text color */
+  font-family: 'MyFont', sans-serif; /* Set your desired font family */
+  /* Add any other global styles for your app here */
+}
+
+/* Style other elements as needed */
+/* For example, you can style your navbar, logo, and other components here */
+
+
 body {
   font-family: 'MyFont', sans-serif;
-  background-color: hsl(218 12% 18%);
+  background-color: #191825;
 
 }
 
 nav{
-  background-color: hsl(218 12% 18%);
+  background-color: #191825;
   position: fixed;
   width: 100%;
   z-index: 100;

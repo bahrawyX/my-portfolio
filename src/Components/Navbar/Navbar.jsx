@@ -12,7 +12,7 @@ return (
       </div>
       <div className="flex items-center w-full justify-between">
           <div className="flex">
-            <img className="h-8 w-auto" src="../images/logo.svg" alt="Bahrawy" /> <span  className='logoText px-2 text-2xl'>Bahrawy</span>
+          <NavLink to="/" style={{display: 'contents'}}> <img className="h-8 w-auto" src="../images/logo.svg" alt="Bahrawy" /> <span  className='logoText px-2 text-2xl'>Bahrawy</span></NavLink>
           </div>
           <div className="hidden sm:ml-6 sm:block">
             <div className="flex space-x-4">
