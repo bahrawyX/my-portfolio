@@ -1,0 +1,66 @@
+.NavLine {
+    z-index: 25 !important;
+    position: absolute;
+    top: 0;
+    left: 130px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding:0 1rem;
+  }
+  
+  .NavLine .linksLine {
+
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 0.907rem;
+  }
+
+
+  .NavLine .linksLine .line , .NavLine .linksLine .lineBottom{
+    height: 20rem;
+    width: 2px;
+    background-color: #fff;
+  }
+  .NavLine .linksLine .lineBottom{
+    height: 15.909rem;
+
+  }
+  
+  .iconWrapper {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: 1rem 0;
+
+  }
+  .iconWrapper:last-child{
+    margin-bottom: 0;
+  }
+  .iconWrapper svg{
+    transition: all 0.3s ease-in-out;
+    fill: #fff;
+    margin: 0 0  3rem 0;
+
+    
+}
+
+.iconWrapper svg:hover{
+    fill: #7752FE;
+
+    scale: 1.3;
+  }
+  @media screen and (max-width :1000px){
+  .NavLine{
+    display: none;
+  }
+
+    }
+    @media screen and (max-width:1600px){
+      .NavLine{
+        left: 50px;
+        z-index: 1   !important;
+      }
+    }

@@ -1,0 +1,7 @@
+  svg{
+    fill: grey !important; 
+    z-index: 5   !important;
+  }
+a:hover svg{
+    fill: #fff !important; 
+  }

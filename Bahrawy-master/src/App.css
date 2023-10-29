@@ -1,0 +1,308 @@
+@font-face {
+  font-family: 'MyFont'; /* Choose a font name for your custom font */
+  src: url('../public/fonts/fira-code/FiraCode-VF.woff') format('woff');
+  /* Use the correct file format and path to your font file */
+  /* The leading '/' in the 'url' value indicates that it's relative to the public folder */
+}
+
+html, body{
+  min-height: 100%  !important;
+    overflow: auto !important;
+    scroll-behavior: unset;
+}
+/* Add this CSS to your App.css or a separate CSS file */
+#particles-js {
+  position: absolute;
+  width: 100% !important;
+  height: 100% !important;
+  box-sizing: border-box;
+  z-index: 0 !important;
+}
+/* Style the container for the particles */
+/* #particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10 !important; Place it behind other content 
+} */
+
+/* Style the content of your app */
+.App {
+  background-color: #191825; /* Set your desired background color */
+  color: #fff; /* Set text color */
+  font-family: 'MyFont', sans-serif; /* Set your desired font family */
+  /* Add any other global styles for your app here */
+  
+}
+.mar{
+  margin-left: 30rem;
+}
+/* Style other elements as needed */
+/* For example, you can style your navbar, logo, and other components here */
+
+
+body {
+  font-family: 'MyFont', sans-serif;
+  background-color: #191825;
+
+}
+.Cursor{
+width: 23px;
+height: 23px;
+background-color: #7752FE;
+position: fixed;
+border-radius: 50%;
+z-index: 0 !important;
+opacity: 0.5;
+transition: scale 1s ease-in-out;
+}
+
+nav{
+  background-color: #191825;
+  position: fixed;
+  width: 100%;
+  z-index: 21 !important;
+  top: 0;
+}
+
+.hot:hover{
+  color: #7752FE;
+
+}
+.active{
+  color: #7752FE;
+}
+
+.h100{
+  height: 100vh !important;
+}
+.logoText{
+  color: #fff;
+  font-weight: 800;
+  
+}
+
+
+
+
+.Left .heroStats{
+  padding:1rem 0.5rem;
+  text-align: center;
+  color: #fff;
+  z-index: 5   !important;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: center;
+  z-index: 5 !important;
+  margin-top: 25px;
+  border: 1px solid grey;
+}
+.Left .heroStats p{
+  display: inline-block;
+}
+.Left .heroStats::before{
+  content: "";
+  display: inline-block;
+  aspect-ratio: 1 / 1;
+  width: 16px;
+  background-color: hsl(287 60% 65%/0.1);
+  border: 1px solid #7752FE;
+  margin-right: 10px;
+}
+
+
+.hash{
+  color: #7752FE;
+}
+
+.SectionHeadName{
+  color: #fff;
+  font-size: 2rem;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  
+  }
+  .SectionHeadName::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10vw;
+    height: 2px;
+    background-color: #7752FE;
+    margin-top: 3px;
+    right: -13rem;
+  
+  }
+
+.SectionHeadName span{
+  color: #7752FE;
+}
+.viewall{
+  color: #7752FE;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.CardContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.line{
+  width: 100%;
+  height: 10px;
+  background-color: #7752FE;
+  margin-bottom: 20px;
+}
+
+.aboutimage{
+  border: 3px solid #7752FE;
+  max-width: 340px;
+  animation:  AboutAnimate 5s infinite ;
+}
+@keyframes AboutAnimate {
+  0%{
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  
+  
+  
+    }
+    50%{
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 70%;
+  
+  
+    }
+    100%{
+      border-radius:60% 40% 30% 70% / 60% 30% 70% 40%;
+  
+  
+  
+    }
+  
+}
+
+
+.icontext{
+  color: hsl(219 14% 71%);
+  margin-left: 0.5rem;
+}
+.ProjectCard{
+  width: 100%;
+  height: 100%;
+}
+.cardImage{
+  height: 180px;
+  
+  object-fit: cover;
+}
+.text{
+  color: hsl(219 14% 71%);
+  
+}
+.icons{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+    
+}
+.App{z-index: 999 !important;}
+.blackBox{
+  z-index: 9999;
+}
+
+/*Buttons */
+.colorPink{
+  color: #7752FE;
+
+}
+.main {
+  position: relative;
+  background-color: #fff;
+}
+.whole{
+  height: 100vh;
+  width: 100%;
+}
+
+ #eyes img {
+  position: relative;
+}
+#anchor{
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+}
+.eye{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar {
+  width: 0px; /* Width of the scrollbar */
+  height: 0;
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #7752FE; /* Color of the thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Customize the scrollbar track on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6633CC; /* Change the color on hover */
+}
+
+
+@media  screen and (max-width: 1110px){
+  .mar{
+    margin-left: 15rem;
+  }
+
+
+}
+@media screen and (max-width :900px) {
+  
+  .SectionHeadName::after{
+    content: "";
+    display: none !important ;
+  
+  }
+}
+@media  screen and (max-width: 768px){
+  .SectionHeadName{
+    font-size: 1.3rem;
+    margin: 8px ;
+  }
+  .SectionHeadName::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10vw;
+    height: 2px;
+    background-color: #7752FE;
+    right: -5rem;
+  
+  }
+  .mar{
+    margin-left: 7rem !important;
+  
+  }
+}.navBox{
+  border: 1px solid #7752FE !important;
+}
