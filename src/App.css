@@ -119,7 +119,9 @@ nav{
   margin-right: 10px;
 }
 
-
+.orange{
+  background-color: hsl(287 60% 65%/0.1) !important;
+}
 .hash{
   color: #7752FE;
 }
@@ -224,10 +226,14 @@ nav{
     
 }
 .App{z-index: 999 !important;}
-.blackBox{
+.blackBoxCss{
   z-index: 9999;
 }
-
+.bgDark{
+  /* background-color: #191825; */
+  background-color: #120E1C !important;
+  
+}
 /*Buttons */
 .colorPink{
   color: #7752FE;
