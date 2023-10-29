@@ -28,6 +28,12 @@ html, body{
   z-index: 10 !important; Place it behind other content 
 } */
 
+.bgDark{
+  /* background-color: #191825; */
+  background-color: #120E1C !important;
+
+}
+
 /* Style the content of your app */
 .App {
   background-color: #191825; /* Set your desired background color */
