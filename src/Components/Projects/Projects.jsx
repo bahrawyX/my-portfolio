@@ -82,14 +82,14 @@ function Projects() {
 
 
     const Button = styled.button`
-    border: 1px solid hsl(287 60% 65%);
+    border: 1px solid #7752FE;
     padding: 0.5rem 1rem;    
     color: #fff;
     background-color: transparent;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     &:hover {
-      background-color: hsl(287 60% 65%);
+      background-color: #7752FE;
     }
     margin-bottom: 1rem;
   `;

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
-
+import styles from './Skills.module.css'
+import { AnimatePresence } from 'framer-motion';
 function Skills() {
     const Container = styled.div`
     width: 50%;
@@ -73,19 +74,20 @@ function Skills() {
 
 return (
     <>
+<AnimatePresence>
 
-        <Container>
-        <Header>
+        <div className={styles.Container}>
+        <div className={styles.Header}>
                     <div className="left flex ">
                         <h2 className='SectionHeadName'><span>#</span>Skills</h2>
                     </div>
-        </Header>
+        </div>
             <div className="flex flex-wrap">
-                <Box>
-                    <HeaderTitle>
+                <div className={styles.Box}>
+                    <h3 className={styles.HeaderTitle}>
                         Language
-                    </HeaderTitle>
-                    <Body>
+                    </h3>
+                    <div className={styles.Body}>
                         <ul>
                             <li>JavaScript</li>
                             <li>Java</li>
@@ -93,28 +95,28 @@ return (
                             <li>Python</li>
                             <li>SQL</li>
                         </ul>
-                    </Body>
-                </Box>
+                    </div>
+                </div>
 
 
-                <Box>
-                    <HeaderTitle>
+                <div className={styles.Box}>
+                    <div className={styles.HeaderTitle}>
                         Talks
-                    </HeaderTitle>
-                    <Body>
+                    </div>
+                    <div className={styles.Body}>
                     <ul>
                         <li>English</li>
                         <li>Arabic</li>
                     </ul>
-                    </Body>
-                </Box>
+                    </div>
+                </div>
                 
                 
-                <Box>
-                    <HeaderTitle>
+                <div className={styles.Box}>
+                    <h3 className={styles.HeaderTitle}>
                         Others
-                    </HeaderTitle>
-                    <Body>
+                    </h3>
+                    <div className={styles.Body}>
                     <ul>
                         <li>HTML</li>
                         <li>CSS</li>
@@ -122,30 +124,30 @@ return (
                         <li>Redux</li>
                         <li>Styled Components</li>
                     </ul>
-                    </Body>
-                </Box>
+                    </div>
+                </div>
                 
-                <Box>
-                    <HeaderTitle>
+                <div className={styles.Box}>
+                    <h3 className={styles.HeaderTitle}>
                         Frameworks
-                    </HeaderTitle>
-                    <Body>
+                    </h3>
+                    <div className={styles.Body}>
                     <ul>
                         <li>React</li>
                         <li>Tailwind</li>
                         <li>Bootstrap</li>
                         <li>jQuery</li>
                     </ul>
-                    </Body>
+                    </div>
 
-                </Box>
+                </div>
 
 
-                <Box>
-                    <HeaderTitle>
+                <div className={styles.Box}>
+                    <h3 className={styles.HeaderTitle}>
                     Tools
-                    </HeaderTitle>
-                    <Body>
+                    </h3>
+                    <div className={styles.Body}>
                     <ul>
                         <li>Git</li>
                         <li>GitHub</li>
@@ -154,14 +156,15 @@ return (
                         <li>Vs</li>
                         <li>atom</li>
                     </ul>
-                    </Body>
+                    </div>
 
-                </Box>
+                </div>
 
             </div>
 
-        </Container>
+        </div>
 
+</AnimatePresence>
     
     </>
 )

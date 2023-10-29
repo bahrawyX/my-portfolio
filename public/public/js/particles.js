@@ -1,3 +1,4 @@
+
 particlesJS("particles-js", {
   particles: {
     number: {
@@ -8,13 +9,13 @@ particlesJS("particles-js", {
       },
     },
     color: {
-      value: "#ffffff",
+      value: "#fff",
     },
     shape: {
       type: "circle",
       stroke: {
         width: 0,
-        color: "#000000",
+        color: "#000",
       },
       polygon: {
         nb_sides: 5,
@@ -26,15 +27,16 @@ particlesJS("particles-js", {
       },
     },
     opacity: {
-      value: 0.48927153781200905,
+      value: 0.6,
       random: false,
       anim: {
         enable: true,
-        speed: 0.2,
+        speed: 0.5,
         opacity_min: 0,
         sync: false,
       },
     },
+    height: 100,
     size: {
       value: 2,
       random: true,
@@ -54,7 +56,7 @@ particlesJS("particles-js", {
     },
     move: {
       enable: true,
-      speed: 0.2,
+      speed: 0.3,
       direction: "none",
       random: true,
       straight: false,

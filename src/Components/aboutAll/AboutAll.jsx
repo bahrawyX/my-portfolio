@@ -1,122 +1,111 @@
 import React from 'react'
 import styled from 'styled-components';
-import Skills from '../Skills/Skills';
+import styles from './AboutAll.module.css'
+import IntialTransition from '../Cool/IntialTransition';
+import Design from '../Particles/Design';
+import HoverEffect from '../Hover/HoverEffect';
+import Footer from '../Footer/Footer';
+
+const FadeUpAnimation = styled.div`
+animation-name: fadeUp;
+animation-duration: 1.2s;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+animation-delay:1.5s;
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+`;
+const FadeLeftAnimation = styled.div`
+animation-name: fadeLeft;
+animation-duration: 1.2s;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+animation-delay:1.5s;
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+`;
+const FadeRightAnimation = styled.div`
+animation-name: fadeRight;
+animation-duration: 1.2s;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+animation-delay:1.5s;
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+`;
 
 function AboutAll() {
-    const Container = styled.div`
-    width: 50%;
-    margin: 7rem auto;
-    
-    `;
-    
-    const Header = styled.div`
-    width: 100%;
-    justify-content: space-between;
-`
-    const Left = styled.div`
-    margin-top: 3rem;
-    width: 70%;
-        p{
-            color: hsl(219 14% 71%);
-            font-weight: 400;
-            width: 100%;
-            margin-bottom: 1rem;
-
-        }
-    `;
-    
-  
-    const Box = styled.button`
-        padding: 0.5rem 1rem;
-        background-color: hsl(218 12% 18%);
-        color: #fff;
-        border: 1px solid hsl(219 14% 71%);
-        margin-right: 1rem;
-        margin-bottom: 1rem;
-        cursor: pointer;
-        &:hover {
-            background-color: hsl(219 14% 71%);
-            color: hsl(218 12% 18%);
-        }
-
-  `;
-  const SkillBox = styled.div`
-  background-color: hsl(218 12% 18%);
-  color: #fff;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-
-
-`;
-const HeaderTitle = styled.h3`
-  width: 100%; 
-  color: hsl(219 14% 71%);
-  font-weight: 400;
-  padding: 0.5rem 1rem;       
-  border: 1px solid hsl(219 14% 71%);
-`
-const Body = styled.div`
-  padding: 0.5rem 1rem;
-  height: auto !important;
-  font-weight: 400;
-      text-align: left;
-      ul{
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          display: flex;
-          li{
-              margin-bottom: 0.5rem;
-              color: hsl(219 14% 71%);
-              &:after{
-                  content: ',';
-                  clear: both;
-              }
-              &:last-child{
-                  &:after{
-                      content: '';
-                  }
-              }
-              margin-right: 1rem;
-          }
-
-      }
-  border: 1px solid hsl(219 14% 71%);
-      border-top: none;
-`
-
+   
 return (
     <>
+        <IntialTransition Title="About Me"/>
+<Design />
 
-        <Container>
-        <Header>
+        <div className={styles.Container}>
+        <div className={styles.Header}>
                     <div className="left flex ">
-                        <h2 className='SectionHeadName'><span>#</span>about</h2>
-                    </div>
-                    <p className='  ml-8 text'> Who Am I ?</p>
-        </Header>
-            <div className="flex items-center justify-center">
+                            <HoverEffect>
+                                 <h2 className='SectionHeadName'><span>#</span>about</h2>
+                            </HoverEffect>
 
-            <img className='aboutimage' src="../images/about-me.png" alt="" />
-            <Left className='ml-24'>
-                <p>I’m a self-taught front-end developer based in Cairo, Egypt. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.</p>
-                <p>Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.</p>
-                <p>I always strive to learn about the newest technologies and frameworks.</p>
-            </Left>
+                    </div>
+                    <p className='ml-8 text'> Who Am I ?</p>
+        </div>
+           <div className={`flex items-center ${styles.aboutBodyContainer}`}>
+            
+            <FadeLeftAnimation>
+            <img className='aboutimage' src="../images/me7.jpg" alt="" />
+            </FadeLeftAnimation>
+            <FadeRightAnimation>
+            <div  className={styles.Left}>
+                <HoverEffect>
+                    <p>I’m a Computer Science Student , front-end developer .I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.</p>
+                    <p>Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.</p>
+                    <p>I always strive to learn about the newest technologies and frameworks.</p>
+                </HoverEffect>
+            </div>
+            </FadeRightAnimation>
             </div>
 
-            <Header  className='mt-32'>
+            <div  className={styles.Header}>
                     <div className="left flex ">
                         <h2 className='SectionHeadName'><span>#</span>Skills</h2>
                     </div>
-            </Header>
-            <div className="flex flex-wrap">
-                <SkillBox>
-                    <HeaderTitle>
+            </div>
+            <FadeUpAnimation>
+            <div className={`flex flex-wrap ${styles.boxContainer}`}>
+                <div className={styles.SkillBox}>
+                    <h3 className={styles.HeaderTitle}>
                         Language
-                    </HeaderTitle>
-                    <Body>
+                    </h3>
+                    <div className={styles.Body}>
                         <ul>
                             <li>JavaScript</li>
                             <li>Java</li>
@@ -124,28 +113,14 @@ return (
                             <li>Python</li>
                             <li>SQL</li>
                         </ul>
-                    </Body>
-                </SkillBox>
-
-
-                <SkillBox>
-                    <HeaderTitle>
-                        Talks
-                    </HeaderTitle>
-                    <Body>
-                    <ul>
-                        <li>English</li>
-                        <li>Arabic</li>
-                    </ul>
-                    </Body>
-                </SkillBox>
+                    </div>
+                </div>
                 
-                
-                <SkillBox>
-                    <HeaderTitle>
+                <div className={styles.SkillBox}>
+                    <h3 className={styles.HeaderTitle}>
                         Others
-                    </HeaderTitle>
-                    <Body>
+                    </h3>
+                    <div className={styles.Body}>
                     <ul>
                         <li>HTML</li>
                         <li>CSS</li>
@@ -153,30 +128,44 @@ return (
                         <li>Redux</li>
                         <li>Styled Components</li>
                     </ul>
-                    </Body>
-                </SkillBox>
+                    </div>
+                </div>
+
+                {/* <div className={styles.SkillBox}>
+                    <h3 className={styles.HeaderTitle}>
+                        Talks
+                    </h3>
+                    <div className={styles.Body}>
+                    <ul>
+                        <li>English</li>
+                        <li>Arabic</li>
+                    </ul>
+                    </div>
+                </div> */}
                 
-                <SkillBox>
-                    <HeaderTitle>
+
+                
+                <div className={styles.SkillBox}>
+                    <h3 className={styles.HeaderTitle}>
                         Frameworks
-                    </HeaderTitle>
-                    <Body>
+                    </h3>
+                    <div className={styles.Body}>
                     <ul>
                         <li>React</li>
                         <li>Tailwind</li>
                         <li>Bootstrap</li>
                         <li>jQuery</li>
                     </ul>
-                    </Body>
+                    </div>
 
-                </SkillBox>
+                </div>
 
 
-                <SkillBox>
-                    <HeaderTitle>
+                <div className={styles.SkillBox}>
+                    <h3 className={styles.HeaderTitle}>
                     Tools
-                    </HeaderTitle>
-                    <Body>
+                    </h3>
+                    <div className={styles.Body}>
                     <ul>
                         <li>Git</li>
                         <li>GitHub</li>
@@ -185,45 +174,44 @@ return (
                         <li>Vs</li>
                         <li>atom</li>
                     </ul>
-                    </Body>
+                    </div>
 
-                </SkillBox>
+                </div>
 
             </div>
+            </FadeUpAnimation>
 
 
-
-        <Header  className='mt-32'>
-                    <div className="left flex ">
+        <div  className={styles.Header}>
+                    <div className="left flex  ">
                         <h2 className='SectionHeadName'><span>#</span>Fun Facts</h2>
                     </div>
-        </Header>
-            <div className="flex flex-wrap">
-                <Box>
+        </div>
+        <div className="flex flex-wrap  justify-center">
+                <button className={styles.Box}>
                     I like winter more than summer
-                </Box>
-                <Box>
-                    I am Asc2 at valorant
-                </Box>
-                <Box>
-                    I hate league of legends 
-                </Box>
-                <Box>
-                    We Go Jim 
-                </Box>
-                <Box>
-                My favorite movie is Intersteller 
-                </Box>
-                <Box>
-                I like Borgir
-                </Box>
-            </div>
+                </button>
+                <button className={styles.Box}>
+                    I am Asc2 at Valorant
+                </button>
+                <button className={styles.Box}>
+                    I hate League of Legends
+                </button>
+                <button className={styles.Box}>
+                    We Go Jim
+                </button>
+                <button className={styles.Box}>
+                    My favorite movie is Interstellar
+                </button>
+                <button className={styles.Box}>
+                    I like Borgir
+                </button>
+                </div>
 
-        </Container>
+        </div>
 
-    
+    <Footer />
     </>
 )
 }
-
-export default AboutAll
+export  default AboutAll

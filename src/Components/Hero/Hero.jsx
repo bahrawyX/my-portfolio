@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
-import Navbar from '../Navbar/Navbar.jsx';
-
+import './Hero.css';
+import IntialTransition from '../Cool/IntialTransition.jsx';
+import Navline from '../Line/Navline.jsx';
+import HoverEffect from '../Hover/HoverEffect.jsx';
+import Design from '../Particles/Design';
 
 const FadeUpAnimation = styled.div`
   animation-name: fadeUp;
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+  animation-delay: 1.5s;
 
   @keyframes fadeUp {
     from {
@@ -20,182 +24,109 @@ const FadeUpAnimation = styled.div`
     }
   }
 `;
+const FadeLeftAnimation = styled.div`
+  animation-name: fadeLeft;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+
+
+  @keyframes fadeLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+`;
+const FadeRightAnimation = styled.div`
+  animation-name: fadeRight;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+
+  @keyframes fadeRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+`;
+
 
 function Hero() {
-  const Section = styled.div`
-    height: 93vh;
-    width: 50%;
-    background-color: #191825;
-    margin: 0 auto;
-  `;
-
-  const Container = styled.div`
-  width: 1024px;
-    height: 85%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  `;
-
-  const Right = styled.div`
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  `;
-
-  const Image = styled.img`
-    width: 100%; /* Make the image take up the entire width of the right section */
-    margin: 0 auto; /* Center the image */
-    display: block; /* Remove the extra bottom space */
-    z-index: 100; 
-  `;
-
-  const Left = styled.div`
-    width: 50%;
-    color: #fff;
-  `;
-
-  const Header = styled.h2`
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 2rem;
-    span {
-      color: hsl(287 60% 65%);
-    }
-  `;
-
-  const SupTitle = styled.p`
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-bottom: 2rem;
-  `;
-
-  const Button = styled.button`
-    border: 1px solid hsl(287 60% 65%);
-    padding: 0.5rem 1rem;    
-    color: #fff;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      background-color: hsl(287 60% 65%);
-    }
-  `;
-  const Box = styled.div`
-    width: 80%;
-    padding: 1rem;
-    background-color: #191825;
-    text-align: center;
-    border: 1px solid hsl(287 60% 65%);
-    margin: 0 auto;
-    position: relative;
-    top:-50px;
-    
-  `;
-
-    const MainBoxText = styled.h4`
-    color: #fff;
-    font-weight: 500;
-    font-size: 1.5rem;
-    position: relative;
-
-    &:before {
-        content: "“";
-        font-size: 70px;
-        height: 50px;
-        color: #fff;
-        position: absolute;
-        background-color: #191825;
-        top: -3.2rem;
-        left: 0;
 
 
-    }
-    `;
-    const SubBox = styled.div`
-    color: #fff;
-    font-size: 1.2rem;
-    position: absolute;
-    width: 20%;
-    padding: 0.5rem;
-    border: 1px solid hsl(287 60% 65%);
-    right: -1px;
-    bottom: -2.9rem;
-
-    &:before {
-      content: "”";
-      font-size: 70px;
-      height: 32px;
-      color: #fff;
-      position: absolute;
-      background-color: #191825;
-      top: -2rem;
-      right: 10px;
-
-
-  }
-    `
-
-  
-    return (
+  return (
       
-      <>
+      <div className='hero'>
+        <Navline  className="novaline"/>
+<Design />
 
-        <Navbar />
-        <Section>
-          <Container>
-            <Left>
-              <FadeUpAnimation>
-                <Header>
-                  <nobr>Bahrawy is a <span> web designer </span></nobr> <br /> and{' '}
-                  <span>front-end </span> developer
-                </Header>
-              </FadeUpAnimation>
-              <FadeUpAnimation>
-                <SupTitle>
+        <IntialTransition Title="Bahrawy"/>
+        <section className='Section hero' >
+          <div className='Container'>
+            <div className='Left'>
+              <FadeRightAnimation>
+
+            <HoverEffect>
+                  <h2 className='Header' >
+                    Bahrawy is a <span>Web Designer </span> <br /> and{' '}
+                    <span>  Front-End </span> Developer
+                  </h2>
+            </HoverEffect>
+                <p className='SupTitle'>
                   He crafts responsive websites where technologies meet creativity
-                </SupTitle>
-              </FadeUpAnimation>
-              <FadeUpAnimation>
-                <Button>Contact Me -&gt;</Button>
-              </FadeUpAnimation>
-            </Left>
-            <Right className='right'>
-              <FadeUpAnimation>
-                <Image className='Image-Outline  ' src='../images/logo-outline.svg' alt='Bahrawy-Photo' />
-              </FadeUpAnimation>
-              <FadeUpAnimation>
-                <Image src='../images/hero.png' className='HeroImg' alt='Bahrawy-Photo' />
-              </FadeUpAnimation>
-              <Image src='../images/hero.png' className='HeroImg' alt='Bahrawy-Photo' />
-                <svg width="250px" height="200px" fill='#fff' class="dots" viewBox="0 0 104 104">
-                    <circle cx="4" cy="4" r="4"></circle><circle cx="4" cy="28" r="4"></circle><circle cx="4" cy="52" r="4"></circle><circle cx="4" cy="76" r="4"></circle><circle cx="4" cy="100" r="4"></circle><circle cx="28" cy="4" r="4"></circle><circle cx="28" cy="28" r="4"></circle><circle cx="28" cy="52" r="4"></circle><circle cx="28" cy="76" r="4"></circle><circle cx="28" cy="100" r="4"></circle><circle cx="52" cy="4" r="4"></circle><circle cx="52" cy="28" r="4"></circle><circle cx="52" cy="52" r="4"></circle><circle cx="52" cy="76" r="4"></circle><circle cx="52" cy="100" r="4"></circle><circle cx="76" cy="4" r="4"></circle><circle cx="76" cy="28" r="4"></circle><circle cx="76" cy="52" r="4"></circle><circle cx="76" cy="76" r="4"></circle><circle cx="76" cy="100" r="4"></circle><circle cx="100" cy="4" r="4"></circle><circle cx="100" cy="28" r="4"></circle><circle cx="100" cy="52" r="4"></circle><circle cx="100" cy="76" r="4"></circle><circle cx="100" cy="100" r="4"></circle>
-                </svg>
-              <div className="heroStats">
-              <FadeUpAnimation>
-                <p>Currently Looking For Work</p>
+                </p>
 
-                </FadeUpAnimation>
+                <div className="buttons">
+                <button className="raise  Button">Contact Me -&gt;</button>
+              <div className="heroStats">
+                <FadeLeftAnimation>
+                <p>Currently Looking For Work</p>
+              </FadeLeftAnimation>
               </div>
-            </Right>
-          </Container>
-          <Box>
+                </div>
+
+              
+              
+              </FadeRightAnimation>
+            </div>
+            
+            <div className='right Right'>
+                <img src='../images/mee (1).jpg' className='HeroImg Image' alt='Bahrawy-Photo' />
+
+            </div>
+          </div>
             <FadeUpAnimation>
-              <MainBoxText>
-                Debugging is like being the detective in a crime movie where you are also the murderer
-              </MainBoxText>
-            </FadeUpAnimation>
+          <div className='Box'>
+              <HoverEffect>
+              <h4 className='MainBoxText'>
+                {/* Debugging is like being the detective in a crime movie where you are also the murderer */}
+                It's was never a bug – it's always an undocumented feature
+              </h4>
+              <p className='Author'><nobr>-Bahrawy</nobr></p>
+              </HoverEffect>
             <FadeUpAnimation>
-              <SubBox>
+              <div className='SubBox'>
+                <HoverEffect>
                 <p><nobr>-Bahrawy</nobr></p>
-              </SubBox>
+                </HoverEffect>
+              </div>
             </FadeUpAnimation>
-          </Box>
-        </Section>
-      </>
+          </div>
+            </FadeUpAnimation>
+        </section>
+      </div>
     );
   }
   
