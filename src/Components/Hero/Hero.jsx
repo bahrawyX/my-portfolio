@@ -89,7 +89,7 @@ function Hero() {
               </p>
 
               <div className="buttons">
-                <button className="raise  Button" >   <Link to="/contact">Contact Me -&gt;</Link></button>
+                <button className="raise  Button" >   <a href='../Abdelrahman El-Bahrawy.pdf' download> Download CV -&gt;</a></button>
                 <div className="heroStats">
                   <FadeLeftAnimation>
                     <p>Currently Looking For Work</p>
