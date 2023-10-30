@@ -8,9 +8,21 @@ function Navbar() {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
+  const handleNavLinkClick = () => {
+    closeMobileMenu();
+  };
+
+  const handleLogoClick = () => {
+    closeMobileMenu();
+  };
+
   return (
     <nav className="bg-dark">
-      <div  className="w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div className="w-full mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="flex items-center">
             <NavLink to="/" style={{ display: 'contents' }}>
@@ -79,26 +91,27 @@ function Navbar() {
           <div className="space-y-1 px-2 pb-3 pt-2">
             <NavLink
               to="/"
-              className= "hot bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+              className="hot bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+              onClick={handleNavLinkClick} // Call the function to close the mobile menu
             >
               Home
             </NavLink>
             <NavLink
               to="/projects"
-              className= " hot text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >
+              className=" hot text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              onClick={handleNavLinkClick}>
               Projects
             </NavLink>
             <NavLink
               to="/about"
               className=" hot text-gray-300 hover-bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >
+              onClick={handleNavLinkClick}>
               About
             </NavLink>
             <NavLink
               to="/contact"
               className=" hot text-gray-300 hover-bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >
+              onClick={handleNavLinkClick}>
               Contact
             </NavLink>
           </div>

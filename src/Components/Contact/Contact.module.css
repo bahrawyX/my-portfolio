@@ -54,7 +54,7 @@
     margin-top: 2rem;
   }
   .contactMe .form{
-    width: 50% !important;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -259,6 +259,12 @@ input:focus{
   .Container {
     width: 80%;
   }
+  .contactMe .form{
+    width: 100% !important;
+  }
+  input{
+    width: 100% !important;
+  }
   .Container .test{
     width: 100% !important;
   }
@@ -270,5 +276,6 @@ input:focus{
 .ContactButton{
   width: 100%;
 }
+
   
 }
