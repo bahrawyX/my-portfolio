@@ -4,7 +4,12 @@
   /* Use the correct file format and path to your font file */
   /* The leading '/' in the 'url' value indicates that it's relative to the public folder */
 }
-
+@font-face {
+  font-family: 'MyFontPoppins'; /* Choose a font name for your custom font */
+  src: url('../public/fonts/Poppins/Poppins-SemiBold.ttf') ;
+  /* Use the correct file format and path to your font file */
+  /* The leading '/' in the 'url' value indicates that it's relative to the public folder */
+}
 html, body{
   min-height: 100%  !important;
 
@@ -103,7 +108,8 @@ nav{
   justify-content: center;
   z-index: 5 !important;
   margin-top: 25px;
-  border: 1px solid grey;
+  border: 1px solid #7752FE;
+  font-family: MyFontPoppins !important;
 }
 .Left .heroStats p{
   display: inline-block;
