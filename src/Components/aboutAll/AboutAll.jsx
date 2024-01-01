@@ -195,9 +195,6 @@ return (
                     I am Asc2 at Valorant
                 </button>
                 <button className={styles.Box}>
-                    I hate League of Legends
-                </button>
-                <button className={styles.Box}>
                     We Go Jim
                 </button>
                 <button className={styles.Box}>
