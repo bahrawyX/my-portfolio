@@ -103,7 +103,7 @@ function Hero() {
           </div>
 
           <div className='right Right'>
-            <img src='../images/mee (1).jpg' className='HeroImg Image' alt='Bahrawy-Photo' />
+            <img src='../images/mee.jpg' className='HeroImg Image' alt='Bahrawy-Photo' />
 
           </div>
         </div>
