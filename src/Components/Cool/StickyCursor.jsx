@@ -22,7 +22,7 @@ const CursorSize =23
     window.addEventListener('mousemove',manageMouseMove)
     return ()=>{
       window.removeEventListener('mousemove',manageMouseMove)
-    }
+    } 
   })
   return (
     <motion.div 
